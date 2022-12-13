@@ -1,0 +1,7 @@
+.header {
+    margin: 45px auto 40px;
+    max-width: 880px;
+    height: 74px;
+    display: flex;
+    border-bottom: 1px solid #A5A5A5;
+}
