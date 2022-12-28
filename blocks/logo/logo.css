@@ -2,3 +2,8 @@
     width: 142px;
     align-self: flex-start;
 }
+@media (max-width: 960px) {
+    .logo {
+        padding-left: 27px;
+    }
+}

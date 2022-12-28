@@ -1,12 +1,18 @@
 .user-info__button {
-  position: absolute;
-  top: 16px;
-  right: 0;
+  background-image: url(../../../images/AddButton.svg);
+  width: 150px;
+  height: 50px;
+  position: relative;
+  margin-left: 244px;
+  padding: 0;
+}
+.user-info__button:hover {
+ opacity: 0.5;
 }
 
 @media screen and (max-width: 980px) {
   .user-info__button {
-    position: static;
-    margin-bottom: 40px;
+    align-self: center;
+    margin: 36px 0 36px;
   }
 }

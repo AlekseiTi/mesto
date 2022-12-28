@@ -1,5 +1,15 @@
 .user-info__job {
-  margin: 20px 0 0 0;
-  font-size: 20px;
-  line-height: 25px;
+  margin: 16px 0 0 0;
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media (max-width: 420px) {
+  .user-info__job {
+    width: 189px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 14px;
+    text-align: center;
+  }
 }

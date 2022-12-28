@@ -1,11 +1,18 @@
 .user-info__edit-button {
-    position: absolute;
-    left: 187px;
-    top: 168px;
-    width: 38px;
+  width: 24px;
+  height: 24px;
+  margin: 15px 0 0 18px;
+  background-image: url(../../../images/editbutton.svg);
+    
+}
+.user-info__edit-button:hover {
+  opacity: 0.6;
+}
+@media (max-width: 420px) {
+  .user-info__edit-button {
+    width: 18px;
     height: 18px;
-    font-size: 12px;
-    line-height: 15px;
-    align-items: center;
-    text-align: center;
+    padding: 0;
+    margin: 8px 0 0 10px;
+  }
 }

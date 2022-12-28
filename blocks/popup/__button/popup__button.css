@@ -1,6 +1,3 @@
-@import url(./_edit/popup__button_edit.css);
-@import url(./_active/popup__button_active.css);
-
 .popup__button {
   width: 100%;
   height: 50px;
