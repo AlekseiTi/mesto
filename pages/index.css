@@ -12,7 +12,6 @@
 @import url(../blocks/user-info/__job/user-info__job.css);
 @import url(../blocks/user-info/__button/user-info__button.css);
 @import url(../blocks/user-info/__edit-button/user-info__edit-button.css);
-@import url(../blocks/user-info/__data/_text/user-info_data_text.css);
 @import url(../blocks/places-list/places-list.css);
 @import url(../blocks/place-card/place-card.css);
 @import url(../blocks/place-card/__description/place-card__description.css);
@@ -26,8 +25,6 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__button/popup__button.css);
-@import url(../blocks/popup/__button/_edit/popup__button.popup__button_edit.css);
-@import url(../blocks/popup/__button/_active/popup__button.popup__button_active.css);
 @import url(../blocks/popup/__is-opened/popup__is-opened.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
