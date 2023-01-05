@@ -1,5 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/inter/inter.css);
+@import url(../blocks/body/body.css);
 @import url(../blocks/root/root.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/logo/logo.css);
@@ -28,7 +29,3 @@
 @import url(../blocks/popup/__is-opened/popup__is-opened.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
-
-body {
-  background-color: #000;
-}

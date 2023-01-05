@@ -1,9 +1,12 @@
 .logo {
     width: 142px;
     align-self: flex-start;
+    margin-bottom: 41px;
 }
+
 @media (max-width: 960px) {
     .logo {
         padding-left: 27px;
+        margin-bottom: 32px;
     }
 }

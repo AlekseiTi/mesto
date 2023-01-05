@@ -1,5 +1,6 @@
 .user-info__button {
-  background-image: url(../../../images/AddButton.svg);
+  background-image: url(../../../images/addbuttonsmall.svg);
+  background-position: center;
   width: 150px;
   height: 50px;
   position: relative;
@@ -12,7 +13,10 @@
 
 @media screen and (max-width: 980px) {
   .user-info__button {
-    align-self: center;
+   background-image: url(../../../images/addbuttonbig.svg);
+   background-position: center;
+    width: 282px;
+    height: 50px;
     margin: 36px 0 36px;
   }
 }

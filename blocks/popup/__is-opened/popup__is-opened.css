@@ -1,3 +1,4 @@
 .popup__is-opened {
   display: flex;
+  z-index: 1;
 }

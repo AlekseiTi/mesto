@@ -1,7 +1,7 @@
 .place-card__description {
   display: flex;
-  height: 23px;
-  width: 246px;
+  max-width: 246px;
+  line-height: 29px;
   margin: 25px 15px 31px 21px;
   align-items: center;
   justify-content: space-between;

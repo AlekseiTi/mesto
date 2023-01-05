@@ -10,88 +10,90 @@
 
 <body>
   <div class="root">
-    <header class="header root__section">
+    <header class="header">
       <img src="./images/logo.svg" alt="лого" class="logo">
     </header>
-    <div class="profile root__section">
+    <main class="content">
+    <section class="profile">
       <div class="user-info">
-        <div class="user-info__photo"></div>
+        <img alt="фото Кусто" class="user-info__photo" src="./images/avatar.jpg">
         <div class="user-info__data">
           <div class="user-info__text">
             <h1 class="user-info__name">Жак-Ив Кусто</h1>
             <p class="user-info__job">Исследователь океана</p>
           </div>
-          <button class="button user-info__edit-button"></button>
+          <button type="button" class="button user-info__edit-button"></button>
         </div>
-        <button class="button user-info__button"></button>
+        <button  type="button" class="button user-info__button"></button>
       </div>
-    </div>
-    <div class="places-list root__section">
+    </section>
+    <section class="places-list">
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Карачаевск"
           src="https://images.unsplash.com/photo-1554747706-2e474e1ae0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Карачаевск</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Карачаевск</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
       </div>
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Гора Эльбрус"
           src="https://images.unsplash.com/photo-1670744373330-17715880b433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Гора Эльбрус</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Гора Эльбрус</h2>
+          <button type="button"  class="place-card__like-icon"></button>
         </div>
       </div>
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Домбай"
           src="https://images.unsplash.com/photo-1670510953302-b676801bcb5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Домбай</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Домбай</h2>
+          <button type="button"  class="place-card__like-icon"></button>
         </div>
       </div>
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Гора Эльбрус"
           src="https://images.unsplash.com/photo-1670509917257-ea50fa82f5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Гора Эльбрус</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Гора Эльбрус</h2>
+          <button type="button"  class="place-card__like-icon"></button>
         </div>
       </div>
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Домбай"
           src="https://images.unsplash.com/photo-1669499020893-741f48b610b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Домбай</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Домбай</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
       </div>
       <div class="place-card">
-        <img class="place-card__image" alt="фото"
+        <img class="place-card__image" alt="Карачаево-Черкессия"
           src="https://images.unsplash.com/photo-1669701843235-5f385642b7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
         <div class="place-card__description">
-          <h1 class="place-card__name">Карачаево-Черкессия</h1>
-          <h2 class="place-card__like-icon"></h2>
+          <h2 class="place-card__name">Карачаево-Черкессия</h2>
+          <button type="button"  class="place-card__like-icon"></button>
         </div>
       </div>
-    </div>
-    <footer class="footer root__section">
+    </section>
+    </main>
+    <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
   </div>
   <div class="popup">
     <div class="popup__container">
-      <img src="./images/close.svg" alt="" class="popup__close">
+      <button type="button" class="button popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form" name="edit">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Жак-Ив Кусто">
-        <input type="text" name="description" class="popup__input popup__input_type_job" placeholder="Исследователь">
-        <button class="button popup__button">Сохранить</button>
+        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя">
+        <input type="text" name="description" class="popup__input popup__input_type_job" placeholder="Введите профессию">
+        <button type="sumbit" class="button popup__button">Сохранить</button>
       </form>
     </div>
   </div>
-  <script src="./script.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

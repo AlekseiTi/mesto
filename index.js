@@ -1,9 +1,12 @@
 function popUp() {
+  let inputName = document.querySelector('.popup__input_type_name');
+  let inputJob = document.querySelector('.popup__input_type_job');
   document.querySelector('.popup').classList.toggle('popup__is-opened');
+  inputName.value = document.querySelector('.user-info__name').innerText;
+  inputJob.value = document.querySelector('.user-info__job').innerText;
 }
 document.querySelector('.user-info__edit-button').addEventListener('click', popUp);
 document.querySelector('.popup__close').addEventListener('click', popUp);
-
 
 
 const editForm = document.forms.edit;
