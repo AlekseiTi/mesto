@@ -1,7 +1,7 @@
-.user-info__job {
-  margin: 16px 0 0 0;
+.profile__job {
+  margin: 0;
   max-width: 336px;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   overflow: hidden;
@@ -10,9 +10,8 @@
   
 }
 @media (max-width: 420px) {
-  .user-info__job {
+  .profile__job {
     max-width: 282px;
-    width: 189px;
     font-size: 14px;
     line-height: 17px;
     margin-top: 14px;

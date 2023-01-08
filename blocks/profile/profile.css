@@ -1,13 +1,18 @@
 .profile {
-  display: flex;
-  align-items: center;
   max-width: 880px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
   margin: auto;
   margin-bottom: 50px;
+  color: white;
+  width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 880px) {
   .profile {
+    flex-direction: column;
     margin-bottom: 36px;
   }
 }

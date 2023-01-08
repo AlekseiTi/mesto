@@ -7,10 +7,7 @@
   cursor: pointer;
   transition: transform .3s linear;
   z-index: 1;
-}
-
-.place-card__like-icon_liked {
-  background-image: url(../../../images/activelike.svg);
+  margin-right: 5px;
 }
 
 .place-card__like-icon:hover {

@@ -1,4 +1,4 @@
-.user-info__photo {
+.profile__photo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 980px) {
-  .user-info__photo {
+  .profile__photo {
     margin-top: 42px;
   }
 }

@@ -1,0 +1,13 @@
+.profile__toptext {
+    margin: 0;
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 420px) {
+    .profile__toptext {
+        width: 217px;
+        margin-left: 46px;
+    }
+}

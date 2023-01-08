@@ -8,79 +8,77 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
-<body>
-  <div class="root">
-    <header class="header">
-      <img src="./images/logo.svg" alt="лого" class="logo">
-    </header>
-    <main class="content">
-      <section class="profile">
-        <div class="user-info">
-          <img alt="фото Кусто" class="user-info__photo" src="./images/avatar.jpg">
-          <div class="user-info__data">
-            <div class="user-info__text">
-              <h1 class="user-info__name">Жак-Ив Кусто</h1>
-              <p class="user-info__job">Исследователь океана</p>
-            </div>
-            <button type="button" class="button user-info__edit-button"></button>
+<body class="root">
+  <header class="header">
+    <img src="./images/logo.svg" alt="лого" class="logo">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img alt="фото Кусто" class="profile__photo" src="./images/avatar.jpg">
+      <div class="profile__data">
+          <div class="profile__toptext">
+            <h1 class="profile__name">Жак-Ив Кусто </h1>
+            <button type="button" class="button profile__edit-button"></button>
           </div>
-          <button type="button" class="button user-info__button"></button>
+          <p class="profile__job">Исследователь океана</p>
         </div>
-      </section>
-      <section class="places-list">
-        <div class="place-card">
-          <img class="place-card__image" alt="Карачаевск"
-            src="https://images.unsplash.com/photo-1554747706-2e474e1ae0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Карачаевск</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <button type="button" class="button profile__button"></button>
+    </section>
+    <section class="places-list">
+      <div class="place-card">
+        <img class="place-card__image" alt="Карачаевск"
+          src="https://images.unsplash.com/photo-1554747706-2e474e1ae0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Карачаевск</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-        <div class="place-card">
-          <img class="place-card__image" alt="Гора Эльбрус"
-            src="https://images.unsplash.com/photo-1670744373330-17715880b433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Гора Эльбрус</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <div class="place-card">
+        <img class="place-card__image" alt="Гора Эльбрус"
+          src="https://images.unsplash.com/photo-1670744373330-17715880b433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Гора Эльбрус</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-        <div class="place-card">
-          <img class="place-card__image" alt="Домбай"
-            src="https://images.unsplash.com/photo-1670510953302-b676801bcb5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Домбай</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <div class="place-card">
+        <img class="place-card__image" alt="Домбай"
+          src="https://images.unsplash.com/photo-1670510953302-b676801bcb5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Домбай</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-        <div class="place-card">
-          <img class="place-card__image" alt="Гора Эльбрус"
-            src="https://images.unsplash.com/photo-1670509917257-ea50fa82f5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Гора Эльбрус</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <div class="place-card">
+        <img class="place-card__image" alt="Гора Эльбрус"
+          src="https://images.unsplash.com/photo-1670509917257-ea50fa82f5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Гора Эльбрус</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-        <div class="place-card">
-          <img class="place-card__image" alt="Домбай"
-            src="https://images.unsplash.com/photo-1669499020893-741f48b610b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Домбай</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <div class="place-card">
+        <img class="place-card__image" alt="Домбай"
+          src="https://images.unsplash.com/photo-1669499020893-741f48b610b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Домбай</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-        <div class="place-card">
-          <img class="place-card__image" alt="Карачаево-Черкессия"
-            src="https://images.unsplash.com/photo-1669701843235-5f385642b7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
-          <div class="place-card__description">
-            <h2 class="place-card__name">Карачаево-Черкессия</h2>
-            <button type="button" class="place-card__like-icon"></button>
-          </div>
+      </div>
+      <div class="place-card">
+        <img class="place-card__image" alt="Карачаево-Черкессия"
+          src="https://images.unsplash.com/photo-1669701843235-5f385642b7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
+        <div class="place-card__description">
+          <h2 class="place-card__name">Карачаево-Черкессия</h2>
+          <button type="button" class="place-card__like-icon"></button>
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
-    </footer>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+  </footer>
   </div>
   <div class="popup">
     <div class="popup__container">
