@@ -1,0 +1,18 @@
+.data__name {
+  width: 294px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 420px) {
+  .data__name {
+    font-size: 27px;
+    line-height: 33px;
+    max-width: 189px;
+  }
+}
