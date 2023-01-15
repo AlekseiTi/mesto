@@ -1,0 +1,14 @@
+.place-card__delete-icon {
+    background: url(../../../images/Trashicon.svg) center no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 18px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+  }
+  

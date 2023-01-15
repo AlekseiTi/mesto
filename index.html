@@ -24,60 +24,12 @@
       </div>
       <button type="button" class="button profile__button"></button>
     </section>
-    <section class="places-list">
-      <div class="place-card">
-        <img class="place-card__image" alt="Карачаевск"
-          src="https://images.unsplash.com/photo-1554747706-2e474e1ae0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Карачаевск</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-      <div class="place-card">
-        <img class="place-card__image" alt="Гора Эльбрус"
-          src="https://images.unsplash.com/photo-1670744373330-17715880b433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Гора Эльбрус</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-      <div class="place-card">
-        <img class="place-card__image" alt="Домбай"
-          src="https://images.unsplash.com/photo-1670510953302-b676801bcb5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Домбай</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-      <div class="place-card">
-        <img class="place-card__image" alt="Гора Эльбрус"
-          src="https://images.unsplash.com/photo-1670509917257-ea50fa82f5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Гора Эльбрус</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-      <div class="place-card">
-        <img class="place-card__image" alt="Домбай"
-          src="https://images.unsplash.com/photo-1669499020893-741f48b610b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Домбай</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-      <div class="place-card">
-        <img class="place-card__image" alt="Карачаево-Черкессия"
-          src="https://images.unsplash.com/photo-1669701843235-5f385642b7d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
-        <div class="place-card__description">
-          <h2 class="place-card__name">Карачаево-Черкессия</h2>
-          <button type="button" class="place-card__like-icon"></button>
-        </div>
-      </div>
-    </section>
+    <section class="places-list"></section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
   </footer>
+
   <div class="popup">
     <div class="popup__container">
       <button type="button" class="button popup__close"></button>
@@ -88,6 +40,26 @@
           placeholder="Введите профессию">
         <button type="submit" class="button popup__button">Сохранить</button>
       </form>
+    </div>
+  </div>
+
+  <div class="popup popupadd">
+    <div class="popup__container">
+      <button type="button" class="button popup__close popupadd__close"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form" name="newcard">
+        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+        <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+        <button type="submit" class="button popup__button popupadd__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="img-popup">
+    <div class="img-popup__content">
+      <button type="button" class="button img-popup__close"></button>
+      <img class="img-popup__place">
+      <h3 class="img-popup__title"></h3>
     </div>
   </div>
   <script src="./index.js"></script>
