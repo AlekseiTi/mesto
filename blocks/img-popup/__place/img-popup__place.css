@@ -2,3 +2,9 @@
     max-width: 80vw;
     max-height: 80vh;
 }
+@media screen and (max-width: 320px) {
+    .img-popup__place {
+        max-width: 240px;
+        margin: 0 40px 0;
+    }
+}

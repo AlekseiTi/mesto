@@ -1,3 +1,4 @@
 .img-popup.img-popup_is-opened {
     display: flex;
+    z-index: 1;
 }
