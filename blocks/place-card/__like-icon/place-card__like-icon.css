@@ -8,6 +8,7 @@
   transition: transform .3s linear;
   z-index: 1;
   margin-right: 5px;
+  background-repeat: no-repeat;
 }
 
 .place-card__like-icon:hover {
