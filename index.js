@@ -44,7 +44,7 @@ cardsContainer.addEventListener('click', function (event) {
 })
 
 
-function popUp() {
+function popUpProfile() {
   let inputName = document.querySelector('.popup__input_type_name');
   let inputJob = document.querySelector('.popup__input_type_job');
   document.querySelector('.popup').classList.toggle('popup_is-opened');
@@ -52,8 +52,8 @@ function popUp() {
   inputJob.value = document.querySelector('.data__job').innerText;
 }
 
-document.querySelector('.data__edit-button').addEventListener('click', popUp);
-document.querySelector('.popup__close').addEventListener('click', popUp);
+document.querySelector('.data__edit-button').addEventListener('click', popUpProfile);
+document.querySelector('.popupprofile__close').addEventListener('click', popUpProfile);
 
 function editProfile(event) {
   event.preventDefault();
@@ -64,7 +64,7 @@ function editProfile(event) {
   if (nameForm.value !== 0 && descriptionForm.value !== 0) {
     infoName.textContent = nameForm.value;
     infoDescription.textContent = descriptionForm.value;
-    popUp();
+    popUpProfile();
   }
 }
 
