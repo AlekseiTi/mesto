@@ -29,18 +29,13 @@ const cardsContainer = document.querySelector('.places-list');
 const editForm = document.forms.edit;
 const newCardForm = document.forms.newcard;
 
-function loadInitial(name, link) {
-  const html = `<div class="place-card">
-  <button class="button place-card__delete-icon"></button>
-  <div class="place-card__image" style="background-image: url(${link})">
-  </div>
-  <div class="place-card__description">
-    <h3 class="place-card__name">${name}</h3>
-    <button class="place-card__like-icon"></button>
-  </div>
-</div>`;
-  cardsContainer.insertAdjacentHTML('beforeend', html);
-}
+
+
+
+initialCards.forEach(function (card) {
+  createCard(card.name, card.link);
+});
+
 
 cardsContainer.addEventListener('click', function (event) {
   if (event.target.closest('.place-card__like-icon')) {
@@ -98,31 +93,12 @@ function addCard(event) {
   };
 }
 function createCard(name, link) {
-  const placeCard = document.createElement('div');
-  cardsContainer.appendChild(placeCard);
-  placeCard.classList.add('place-card');
-
-  const cardImage = document.createElement('div');
-  placeCard.appendChild(cardImage);
-  cardImage.classList.add('place-card__image');
-  cardImage.style.backgroundImage = 'url(' + link + ')';
-
-  const buttonDelete = document.createElement('button');
-  cardImage.appendChild(buttonDelete);
-  buttonDelete.classList.add('place-card__delete-icon');
-
-  const cardDescription = document.createElement('div');
-  placeCard.appendChild(cardDescription);
-  cardDescription.classList.add('place-card__description');
-
-  const cardName = document.createElement('h3');
-  cardDescription.appendChild(cardName);
-  cardName.classList.add('place-card__name');
-  cardName.textContent = name;
-
-  const buttonLike = document.createElement('button');
-  cardDescription.appendChild(buttonLike);
-  buttonLike.classList.add('place-card__like-icon');
+  const cardTemplate = document.getElementById('cardTemplate').content;
+  const placesList = document.querySelector('.places-list');
+  const cardElement = cardTemplate.querySelector('.place-card').cloneNode(true);
+  cardElement.querySelector('.place-card__name').textContent = name;
+  cardElement.querySelector('.place-card__image').style.backgroundImage = `url(${link})`;
+  placesList.prepend(cardElement);
 }
 
 document.querySelector('.popupadd__button').addEventListener('click', addCard);
@@ -139,9 +115,6 @@ cardsContainer.addEventListener('click', deleteCard);
 
 
 editForm.addEventListener('submit', editProfile);
-initialCards.forEach(function (card) {
-  loadInitial(card.name, card.link);
-});
 
 
 
