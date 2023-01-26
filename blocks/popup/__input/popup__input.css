@@ -15,5 +15,5 @@
   margin-bottom: 0;
 }
 .popup__input::placeholder {
-  color: #000;
+  color: rgba(0, 0, 0, 0.2);
 }
