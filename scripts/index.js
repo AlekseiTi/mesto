@@ -76,35 +76,6 @@ function addPopUp() {
 profileButton.addEventListener('click', addPopUp);
 addClose.addEventListener('click', addPopUp);
 
-
-function showPopUp(type, title, placholder1, placeholder2) {
-  // popup selector
-  // form selector
-  // img selector
-  switch (type) {
-    case 'image':
-      
-      break;
-      case 'profle':
-        // form display block
-        // .. add title and placeholders
-        break;
-      case 'add':
-      
-      break;
-  
-    default:
-      break;
-  }
-
-  // toggle popup
-}
-
-
-
-
-
-
 function addCard(event) {
   event.preventDefault();
   const name = newCardForm.elements.name;
@@ -124,7 +95,7 @@ function createCard(name, link) {
   cardElement.querySelector('.place-card__image').setAttribute("src", link);
   cardElement.querySelector('.place-card__image').setAttribute("alt", name);
   cardElement.querySelector('.place-card__image').addEventListener('click', imagePopUp);
-  cardElement.querySelector('.place-card__delete-icon').addEventListener('click', deleteCard); 
+  cardElement.querySelector('.place-card__delete-icon').addEventListener('click', deleteCard);
   cardElement.addEventListener('click', function (event) {
     if (event.target.closest('.place-card__like-icon')) {
       event.target.classList.toggle('place-card__like-icon_liked')
@@ -149,7 +120,7 @@ function deleteCard(event) {
 
 editForm.addEventListener('submit', editProfile);
 
-function imagePopUp(event) { // SHOULD BE IN showPopUp inside type==='image'
+function imagePopUp(event) {
   const imgUrl = event.target.getAttribute("src");
   popupImg.setAttribute('src', imgUrl);
   const imgAlt = event.target.getAttribute("alt");
@@ -159,7 +130,7 @@ function imagePopUp(event) { // SHOULD BE IN showPopUp inside type==='image'
   popupImage.classList.add('img-popup_is-opened');
 }
 
-function imageClose() { // RENAME TO CLOSE POPUP
+function imageClose() {
   document.querySelector('.img-popup').classList.remove('img-popup_is-opened');
 }
 const cardsImages = document.querySelectorAll('.place-card__image')
