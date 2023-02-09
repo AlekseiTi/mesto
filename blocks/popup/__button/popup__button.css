@@ -1,4 +1,4 @@
-.popup__button {
+.popUp__button {
   border-radius: 2px;
   width: 100%;
   height: 50px;
@@ -13,12 +13,12 @@
   font-family: 'Inter', 'Ariel';
 }
 
-.popup__button:hover {
+.popUp__button:hover {
   opacity: 0.8;
 }
 
 @media screen and (max-width: 480px) {
-  .popup__button {
+  .popUp__button {
     font-size: 14px;
     line-height: 17px;
     margin-top: 45px;
