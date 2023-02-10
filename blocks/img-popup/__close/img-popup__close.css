@@ -1,4 +1,4 @@
-.imgPopUpclose {
+.imgPopup__close {
     background-image: url(../../../images/closebig.svg);
     background-position: center;
     width: 32px;
@@ -10,12 +10,12 @@
     border: none;
   }
   
-  .imgPopUpclose:hover {
+  .imgPopup__close:hover {
     opacity: 0.6;
   }
   
   @media screen and (max-width: 480px) {
-    .imgPopUpclose {
+    .imgPopup__close {
       background-image: url(../../../images/closesmall.svg);
       background-repeat: no-repeat;
       width: 20px;
@@ -27,7 +27,7 @@
   }
 
 @media (max-width: 320px) {
-  .imgPopUpclose {
+  .imgPopup__close {
         margin-right: 40px;
     }
 }

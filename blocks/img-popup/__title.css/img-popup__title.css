@@ -1,4 +1,4 @@
-.img-popup__title {
+.imgPopup__title {
     max-width: 292px;
     font-weight: 400;
     font-size: 12px;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 320px) {
-    .img-popup__title {
+    .imgPopup__title {
         margin-left: 40px;
         line-height: 13px;
     }

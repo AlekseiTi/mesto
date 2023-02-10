@@ -1,4 +1,4 @@
-.popUp__input {
+.popup__input {
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -11,9 +11,9 @@
   margin-bottom: 30px;
 }
 
-.popUp__input:last-of-type {
+.popup__input:last-of-type {
   margin-bottom: 0;
 }
-.popUp__input::placeholder {
+.popup__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
