@@ -39,13 +39,16 @@ const descriptionForm = formEditProfile.elements.description;
 const buttonOpenAddCardPopup = document.querySelector('.profile__button');
 const buttonCloseAddCardPopup = document.querySelector('.addNewCardPopup__close');
 const cardTemplate = document.getElementById('cardTemplate').content;
-const popupImg = document.querySelector('.imgPopup__place');
 const popupTitle = document.querySelector('.imgPopup__title');
 const buttonCloseImagePopup = document.querySelector('.imgPopup__close');
 const addButton = document.querySelector('.addNewCardPopup__button');
 const profilePopup = document.querySelector('.profilePopup');
 const addNewCardPopup = document.querySelector('.addNewCardPopup');
 const imgPopup = document.querySelector('.imgPopup');
+const imgPopupPic = document.querySelector('.imgPopup__place');
+const dataName = document.querySelector('.data__name');
+const dataJob = document.querySelector('.data__job');
+
 
 initialCards.forEach(function (card) {
   const newCard = createCard(card.name, card.link);
@@ -61,8 +64,8 @@ function closePopup(popup) {
 }
 
 function openProfilePopup() {
-  inputName.value = document.querySelector('.data__name').innerText;
-inputJob.value = document.querySelector('.data__job').innerText;
+  inputName.value = dataName.innerText;
+  inputJob.value = dataJob.innerText;
   openPopup(profilePopup);
 }
 
@@ -130,16 +133,16 @@ formNewCard.addEventListener('submit', addCard);
 buttonOpenAddCardPopup.addEventListener('click', openPopupAdd);
 buttonCloseAddCardPopup.addEventListener('click', closePopupAdd);
 
-function openImgPopup() {
-  function imagePopup(event) {
+function openImgPopup(event) {
     const imgUrl = event.target.getAttribute("src");
-    popupImg.setAttribute('src', imgUrl);
+    imgPopupPic.setAttribute('src', imgUrl);
     const imgAlt = event.target.getAttribute("alt");
-    popupImg.setAttribute('alt', imgAlt);
+    imgPopupPic.setAttribute('alt', imgAlt);
     const sibling = event.target.nextElementSibling;
     popupTitle.innerText = sibling.firstElementChild.textContent;
-  }
-  openPopup(imgPopup);
+    console.log(imgPopupPic);
+    console.log(popupTitle);
+    openPopup(imgPopup);
 }
 
 function closeImgPopup() {
@@ -147,6 +150,5 @@ function closeImgPopup() {
 }
 
 buttonCloseImagePopup.addEventListener('click', closeImgPopup);
-
 formEditProfile.addEventListener('submit', editProfile);
 const cardsImages = document.querySelectorAll('.place-card__image');
