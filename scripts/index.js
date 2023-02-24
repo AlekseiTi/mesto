@@ -1,30 +1,3 @@
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
-
 const cardsContainer = document.querySelector('.places-list');
 const formEditProfile = document.forms.edit;
 const formNewCard = document.forms.newcard;
@@ -48,6 +21,9 @@ const imgPopup = document.querySelector('.imgPopup');
 const imgPopupPic = document.querySelector('.imgPopup__place');
 const dataName = document.querySelector('.data__name');
 const dataJob = document.querySelector('.data__job');
+const popupOverlays = document.querySelectorAll('.popup');
+
+
 
 
 initialCards.forEach(function (card) {
@@ -152,3 +128,22 @@ function closeImgPopup() {
 buttonCloseImagePopup.addEventListener('click', closeImgPopup);
 formEditProfile.addEventListener('submit', editProfile);
 const cardsImages = document.querySelectorAll('.place-card__image');
+
+
+popupOverlays.forEach((item) => {
+    item.addEventListener("mousedown", (evt) => {
+        if (evt.target === evt.currentTarget) {
+            closePopup(evt.target);
+            formNewCard.reset();
+        }
+    });
+});
+
+document.addEventListener("keydown", keyHandlerEscape);
+function keyHandlerEscape(evt) {
+    if (evt.key === "Escape") {
+      const popupOpened = document.querySelector('.popup_is-opened');
+        closePopup (popupOpened);
+        formNewCard.reset();
+    }
+}
