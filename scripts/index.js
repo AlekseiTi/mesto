@@ -33,10 +33,12 @@ initialCards.forEach(function (card) {
 
 function openPopup(popup) {
   popup.classList.add('popup_is-opened');
+  document.addEventListener("keydown", keyHandlerEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_is-opened');
+  document.removeEventListener("keydown", keyHandlerEscape);
 }
 
 function openProfilePopup() {
@@ -139,11 +141,10 @@ popupOverlays.forEach((item) => {
     });
 });
 
-document.addEventListener("keydown", keyHandlerEscape);
+
 function keyHandlerEscape(evt) {
     if (evt.key === "Escape") {
       const popupOpened = document.querySelector('.popup_is-opened');
         closePopup (popupOpened);
-        formNewCard.reset();
     }
 }
