@@ -22,9 +22,7 @@ const imgPopupPic = document.querySelector('.imgPopup__place');
 const dataName = document.querySelector('.data__name');
 const dataJob = document.querySelector('.data__job');
 const popupOverlays = document.querySelectorAll('.popup');
-
-
-
+const popupSubmit = document.querySelector('.popup__submit');
 
 initialCards.forEach(function (card) {
   const newCard = createCard(card.name, card.link);
@@ -65,6 +63,7 @@ buttonCloseEditProfilePopup.addEventListener('click', closeProfilePopup);
 function openPopupAdd() {
   openPopup(addNewCardPopup);
   formNewCard.reset()
+  disableButton(addButton);
 }
 
 function closePopupAdd() {
@@ -78,7 +77,7 @@ function addCard(event) {
   const link = formNewCard.elements.link;
 
   if (name.value.length !== 0 && link.value.length !== 0) {
-    const newCard = createCard(name.value, link.value)
+    const newCard = createCard(name.value, link.value);
     formNewCard.reset();
     cardsContainer.prepend(newCard);
     closePopupAdd();
