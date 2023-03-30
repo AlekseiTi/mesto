@@ -1,4 +1,4 @@
-.place-card__like-icon {
+.element__like {
   background: url(../../../images/inactivelike.svg);
   background-color: transparent;
   border: none;
@@ -6,11 +6,10 @@
   height: 19px;
   cursor: pointer;
   transition: transform .3s linear;
-  z-index: 1;
   margin-right: 5px;
   background-repeat: no-repeat;
 }
 
-.place-card__like-icon:hover {
+.element__like:hover {
   opacity: 0.5;
 }
