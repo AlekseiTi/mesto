@@ -2,7 +2,8 @@
     background-color: transparent;
     opacity: 0.2;
     color: black;
-    margin-top: 31px;
-
+}
+.popup__submit_disabled:hover  {
+    opacity: 0.2;
 }
 

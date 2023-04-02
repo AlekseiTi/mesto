@@ -37,7 +37,7 @@ const formEditProfile = document.forms.edit;
 const formNewCard = document.forms.newcard;
 const inputName = document.querySelector('.popup__input_type_name');
 const inputJob = document.querySelector('.popup__input_type_job');
-const titleInput = document.querySelector(".popup__input_type_name");
+const titleInput = document.querySelector(".popup__input_type_pic");
 const linkInput = document.querySelector(".popup__input_type_link-url");
 const buttonOpenEditProfilePopup = document.querySelector('.data__edit-button');
 const nameForm = formEditProfile.elements.name;
@@ -140,6 +140,7 @@ function handleEditSubmit(evt) {
     evt.preventDefault();
     dataName.textContent = inputName.value;
     dataJob.textContent = inputJob.value;
+    validPopupEditForm.resetValidation();
     closePopup(profilePopup);
 }
 
@@ -151,7 +152,7 @@ function handleAddSubmit(evt) {
     const card = createCard({ name: title, link: link });
 
     cards.prepend(card);
+    formNewCard.reset();
     validPopupAddForm.resetValidation();
     closePopup(addNewCardPopup);
-    formNewCard.reset();
 }

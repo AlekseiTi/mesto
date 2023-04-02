@@ -4,6 +4,8 @@ export default class Card {
         this._name = data.name;
         this._link = data.link;
         this._handleCardClick = handleCardClick;
+        this.deleteCard = this.deleteCard.bind(this);
+        this.cardLikeard = this.cardLike.bind(this);
     }
 
     _getTemplate() {
@@ -28,16 +30,18 @@ export default class Card {
     _setEventListeners() {
         this._item
             .querySelector(".element__trash")
-            .addEventListener("click", () => {
-                this._item.remove();
-            });
-        this._item
-            .querySelector(".element__like")
-            .addEventListener("click", (evt) => {
-                evt.currentTarget.classList.toggle("element__like_liked");
-            });
+            .addEventListener("click", this.deleteCard)
+        this._like = this._item.querySelector(".element__like"); 
+        this._like.addEventListener("click", this.cardLike);
         this._cardImage.addEventListener("click", () => {
             this._handleCardClick(this._name, this._link);
         });
+    }
+
+    deleteCard () {
+       this._item.remove();
+    }
+    cardLike (evt) {
+            evt.currentTarget.classList.toggle("element__like_liked");
     }
 }

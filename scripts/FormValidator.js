@@ -40,10 +40,12 @@ export default class FormValidator {
         }
     }
 
+    _areInputsEmpty(list) {
+       return list.filter(input => input.value === "");
+    }
+
     _toggleButtonState() {
-        this._buttonElement.classList.add(this._inactiveButtonClass);
-            this._buttonElement.disabled = true;
-        if (this._hasInvalidInput()) {
+        if (this._hasInvalidInput() || this._areInputsEmpty(this._inputList).length) {
             this._buttonElement.classList.add(this._inactiveButtonClass);
             this._buttonElement.disabled = true;
         } else {
@@ -66,7 +68,10 @@ export default class FormValidator {
             });
         });
     }
-
+    __disableButton(_submitButtonSelector) {
+        _submitButtonSelector.classList.add(config.inactiveButtonClass);
+        _submitButtonSelector.disabled = true;
+    }
     enableValidation = () => {
         this._toggleButtonState();
         this._setEventListener();
