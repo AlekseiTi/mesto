@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+
+<body class="root">
+  <header class="header">
+    <img src="<%=require('./images/logo.svg')%>" alt="лого" class="logo">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img alt="фото Кусто" class="profile__photo" src="<%=require('./images/avatar.jpg')%>">
+      <div class="data">
+        <div class="data__toptext">
+          <h1 class="data__name">Жак-Ив Кусто</h1>
+          <button type="button" class="button data__edit-button"></button>
+        </div>
+        <p class="data__job">Исследователь океана</p>
+      </div>
+      <button type="button" class="button profile__button"></button>
+    </section>
+    <section class="places-list"></section>
+  </main>
+<div class="popup profilePopup">
+    <div class="popup__container">
+      <button type="button" class="button popup__close"></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="popup__form" name="edit" novalidate>
+        <input id="name-input" minlength="2" maxlength="40" type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя" required>
+        <span class="popup__error"></span>
+        <input id="description-input" minlength="2" maxlength="200" type="text" name="description" class="popup__input popup__input_type_job"
+          placeholder="Введите профессию" required>
+          <span class="popup__error"></span>
+        <button type="submit" class="popup__submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup addNewCardPopup">
+    <div class="popup__container">
+      <button type="button" class="button popup__close"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form" name="newcard" novalidate>
+        <input id="picture-input" minlength="2" maxlength="30" type="text" name="name" class="popup__input popup__input_type_pic" placeholder="Название" required>
+       <span class="popup__error"></span>
+        <input id="link-input" minlength="2" type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required>
+         <span class="popup__error"></span>
+        <button type="submit" class="popup__submit popup__submit_add">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup imgPopup">
+    <div class="imgPopup__content">
+      <button type="button" class="button popup__close"></button>
+      <img class="imgPopup__place">
+      <h3 class="imgPopup__title"></h3>
+    </div>
+  </div>
+    <template id="element">
+      <div class="element__item">
+          <img class="element__image" />
+          <button class="element__trash" type="button"></button>
+          <div class="element__description">
+              <h2 class="element__title"></h2>
+              <button class="element__like" type="button"></button>
+          </div>
+      </div>
+  </template>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+  </footer>
+</body>
+</html>
