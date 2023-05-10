@@ -1,9 +1,0 @@
-.element__description {
-  display: flex;
-  max-width: 246px;
-  line-height: 23px;
-  margin: 25px 15px 31px 21px;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}

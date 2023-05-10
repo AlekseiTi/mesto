@@ -1,0 +1,7 @@
+.content__container {
+    margin: 0 auto;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    width: 282px;
+    background-color: white;
+}
