@@ -18,7 +18,7 @@ const cardList = new Section ({
 }, '.content')
 
 const userInfo = new UserInfo('.data__name', '.data__job', '.profile__image');
-const imagePopup = new PopupWithImage('.popup_image');
+const imagePopup = new PopupWithImage('.popup-image');
 
 Promise.all([api.getUserInfo(), api.getInitialCards()])
     .then(([userData, initialCards]) => {
