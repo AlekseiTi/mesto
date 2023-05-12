@@ -13,8 +13,7 @@ import {api} from "../components/Api";
 let userId;
 
 const cardList = new Section ({
-    items: {},
-    renderer: () => {},
+    renderer: (item) => cardList.addItem(createCard(item)) 
 }, '.content')
 
 const userInfo = new UserInfo('.data__name', '.data__job', '.profile__image');
@@ -25,12 +24,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
         userInfo.setUserAvatar(userData.avatar)
         userInfo.setUserInfo(userData)
         userId = userData._id
-
-        cardList.setItems(initialCards)
-        cardList.setRenderer((item) => {    
-            cardList.addItem(createCard(item));
-        })
-        cardList.renderItems()
+        cardList.renderItems(initialCards)
     })
     .catch((err) => console.log(err))
 
@@ -52,7 +46,7 @@ const createCard = (item) => {
         },
         userID: userId,
         handleDeleteLike: (cardId) => {return api.deleteLike(cardId)},
-        handleAddLike: (cardId) => {return api.addLike(cardId)},
+        handleAddLike: (item) => api.addLike(item.id).then((data) => data.likes.length).catch(e => console.log(e)),
     })
     const cardElement = card.createCard()
     return cardElement

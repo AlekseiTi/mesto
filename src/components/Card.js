@@ -59,11 +59,9 @@ export default class Card {
     _setEventListeners(likeButton, deleteButton, image, likeCounter) {
         likeButton.addEventListener('click', (evt) => {
             if (!evt.target.classList.contains(this.activeLikeBtnSelector)) {
-                this.handleAddLike(this.cardId).then((data) => {
-                    likeCounter.textContent = data.likes.length
+                const likesLength = this.handleAddLike(this.cardId)
+                    likeCounter.textContent = likesLength;
                     this._toggleLike(evt)
-                })
-                .catch((err) => console.log(err))
             } else {
                 this.handleDeleteLike(this.cardId).then((data) => {
                     likeCounter.textContent = data.likes.length
